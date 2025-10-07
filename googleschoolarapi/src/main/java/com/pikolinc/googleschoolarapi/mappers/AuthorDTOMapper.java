@@ -11,10 +11,10 @@ public class AuthorDTOMapper {
 
         return new AuthorDTO(
                 AuthorDetailsDTOMapper.mapAuthorDetails(author,authorId),
-                InterestDTOMapper.mapInterest((List<Map<String, Object>>) author.get("interest")),
-                ArticlesDTOMapper.mapArticles((List<Map<String, Object>>) author.get("articles")),
-                PublicAccessDTOMapper.mapPublicAccess((Map<String, Object>) author.get("public_access")),
-                PaginationDTOMapper.mapPagination((Map<String, Object>) author.get("serpapi_pagination"))
+                InterestDTOMapper.mapInterest((List<Map<String, Object>>) author.get("interests")),
+                ArticlesDTOMapper.mapArticles((List<Map<String, Object>>) apiResponse.get("articles")),
+                PublicAccessDTOMapper.mapPublicAccess((Map<String, Object>) apiResponse.get("public_access")),
+                PaginationDTOMapper.mapPagination((Map<String, Object>) apiResponse.get("serpapi_pagination"))
         );
 
     }
