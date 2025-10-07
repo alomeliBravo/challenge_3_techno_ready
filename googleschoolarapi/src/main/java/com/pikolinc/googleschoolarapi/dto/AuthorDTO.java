@@ -10,6 +10,7 @@ public record AuthorDTO(
     PaginationDTO pagination
 ) {
     public record AuthorDetailsDTO(
+        String authorId,
         String name,
         String affiliations,
         String email,
