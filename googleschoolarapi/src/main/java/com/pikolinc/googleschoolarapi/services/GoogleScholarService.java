@@ -10,7 +10,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.Map;
 
 @Service
-class GoogleScholarService {
+public class GoogleScholarService {
     private final RestTemplate restTemplate;
 
     @Value("${serp.api.base.url}")
