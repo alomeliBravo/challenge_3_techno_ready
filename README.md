@@ -15,3 +15,44 @@ Automate the integrations of informations for the institution's Top 3 researcher
 ## Project relevance:
 
 It replaces time-consuming and error-prone manual integration with and automated solution, streamlining research data management. This improves efficiency, accuracy, and accesibility of researcher information for intitutional procesess.
+
+## Technologies used
+
+- Java 17 - Programming Language
+- Spring Boot 3.5.6 - Application Framework
+- RestTemplate - HTTP Client to implement SerpAPI
+- Spring Web - Provide support for building RESTful APIs
+- SerpAPI - External API from Google Scholar
+- Spring Dotenv - Library for loading environment variables
+- Maven - Build automation adn dependency management.
+
+## Prerequisites
+
+- Java 17 or higher installed
+- Maven 3.6 or higher installed
+- SerpAPI account
+
+## Instalation and execution
+
+### Clone the repository
+
+```bash
+git clone https://github.com/alomeliBravo/challenge_3_techno_ready.git
+cd googleschoolarapi
+```
+
+### Configure environment variables
+
+Create and environment file based on the .env.example
+
+```bash
+cp .env.example .env
+```
+
+And insert your serpAPI Key.
+
+### Execute the application
+
+```bash
+mvn spring-boot:run
+```
