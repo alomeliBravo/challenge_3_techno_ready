@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-interface Article extends JpaRepository<ArticleEntity, Long> {
+public interface ArticleRepository extends JpaRepository<ArticleEntity, Long> {
     List<ArticleEntity> findByTitle(String title);
 
     List<ArticleEntity> findByTitleContaining(String keyword);
