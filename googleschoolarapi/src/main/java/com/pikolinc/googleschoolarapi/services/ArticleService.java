@@ -27,7 +27,7 @@ public class ArticleService {
     }
 
     public List<ArticleEntity> getArticlesByAuthor(String author){
-        return articleRepository.findByAuthor(author);
+        return articleRepository.findByAuthors(author);
     }
 
     public ArticleEntity getArticleById(Long id) {
