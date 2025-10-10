@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "81dd4abb-4304-4bba-b289-f93c7d7cb5f0",
+		"name": "Challenge 3 API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40342251"
+	},
+	"item": [
+		{
+			"name": "GET Author by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/author/LSsXyncAAAAJ"
+			},
+			"response": []
+		},
+		{
+			"name": "Missing author ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/author/"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Specific Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "localhost:8080/articles/LSsXyncAAAAJ/1"
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/articles/"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Article by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/articles/3"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Article By Specific Title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/articles/title/Genome-wide analysis of estrogen receptor binding sites"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Article by Author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/articles/author/JS Carroll"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Article by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/articles/1"
+			},
+			"response": []
+		}
+	]
+}
