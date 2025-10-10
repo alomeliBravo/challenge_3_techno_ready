@@ -14,6 +14,12 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.Map;
 
+/**
+ * Service for interacting with the Google Scholar API through SerpAPI.
+ * <p>
+ * Handles author lookups and response mapping to {@link AuthorDTO}.
+ * </p>
+ */
 @Service
 public class GoogleScholarService {
     private final RestTemplate restTemplate;
@@ -24,11 +30,23 @@ public class GoogleScholarService {
     @Value("${serp.api.key}")
     private String apiKey;
 
+    /**
+     * Injects {@link RestTemplate} dependency.
+     *
+     * @param restTemplate HTTP client for API requests
+     */
     public GoogleScholarService(RestTemplate restTemplate){
         this.restTemplate = restTemplate;
     }
 
-
+    /**
+     * Fetches author information from Google Scholar using SerpAPI.
+     *
+     * @param authorId unique author ID from Google Scholar
+     * @return mapped {@link AuthorDTO} object
+     * @throws AuthorMissingPropertyException if API key is missing
+     * @throws AuthorNotFoundException if author is not found
+     */
     public AuthorDTO getAuthorById(String authorId){
         if(this.apiKey == null || this.apiKey.isEmpty()){
             throw new AuthorMissingPropertyException("API Key is missing");
