@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-class ArticleService {
+public class ArticleService {
     private ArticleRepository articleRepository;
 
     public ArticleEntity saveArticle(ArticleEntity article){
