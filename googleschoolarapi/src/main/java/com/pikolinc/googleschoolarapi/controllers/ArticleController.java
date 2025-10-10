@@ -15,19 +15,29 @@ class ArticleController {
         this.articleService = articleService;
     }
 
-    @PostMapping
-    public ArticleEntity createArticle(@RequestBody ArticleEntity article) {
-        return articleService.saveArticle(article);
+    @PostMapping("/{authorId}/{position}")
+    public ArticleEntity createArticle(@PathVariable String authorId, @PathVariable int position) {
+        return articleService.saveArticle(authorId, position);
     }
 
-    @GetMapping
-    public List<ArticleEntity> getAllArticles(@RequestParam String title) {
+    @GetMapping("/")
+    public List<ArticleEntity> getAllArticles() {
         return articleService.getAllArticles();
     }
 
     @GetMapping("/{id}")
     public ArticleEntity getArticleById(@PathVariable Long id) {
         return articleService.getArticleById(id);
+    }
+
+    @GetMapping("/title/{title}")
+    public List<ArticleEntity> getArticlesByTitle(@PathVariable String title) {
+        return articleService.getArticlesByTitle(title);
+    }
+
+    @GetMapping("/author/{author}")
+    public List<ArticleEntity> getArticlesByAuthor(@PathVariable String author) {
+        return articleService.getArticlesByAuthor(author);
     }
 
     @DeleteMapping("/{id}")
