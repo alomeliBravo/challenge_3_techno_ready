@@ -66,3 +66,7 @@ mvn spring-boot:run
 ```bash
 Use GET "localhost:8080/author/{id}"
 ```
+
+### Swagger Documentation
+
+http://localhost:8080/swagger-ui/index.html
