@@ -10,7 +10,5 @@ import java.util.List;
 public interface ArticleRepository extends JpaRepository<ArticleEntity, Long> {
     List<ArticleEntity> findByTitle(String title);
 
-    List<ArticleEntity> findByTitleContaining(String keyword);
-
-    List<ArticleEntity> findByAuthors(String authors);
+    List<ArticleEntity> findByAuthorsContaining(String authors);
 }
